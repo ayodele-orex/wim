@@ -815,6 +815,8 @@ padding: 0;
   padding: 5px;
   margin-bottom: 10px;
   background-color: transparent;
+  border: 1px solid #DC9A00;
+  border-radius: 0.9rem;
 }
 .blog-contants .blog-input  a .lock-blog:hover{
   padding: 5px;
@@ -1040,6 +1042,7 @@ padding: 10px;
 .about_us_contents .about_us_text{
     max-width:69%;
     padding: 0 5px;
+    /* transition: justify; */
 }
   
 .about_us_contents{
@@ -1064,20 +1067,31 @@ padding: 10px;
   font-size: 16px;
   letter-spacing: 1px;
   margin-bottom: 20px;
+  text-align: justify;
 }
   
   
 @media screen and (max-width:  1180px){
     .about_us_contents{
+      margin: 0;
       width: 100%;
       height: auto;
     }
     .about_us_contents .about_us_text h5{
     text-align: center;    
   }
-    /* .about_us_contents .about_us_img img{
+  .about_us_contents .about_us_img img{
+    height: auto;
+    width: 410px;
+    padding: 20px;
+    max-width: 100%;
+  }
     
-    } */
+  .about_us_contents .about_us_text{
+      max-width:100%;
+      padding: 0 5px;
+  }
+    
 }
   
 
