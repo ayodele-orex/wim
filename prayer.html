@@ -63,21 +63,21 @@
       <div class="right_side_title">
         <h3>Submit a Prayer Request</h3>
       </div>
-      <form  onsubmit="return false"; action="ww.google.com" class="form" >
+      <form  action="prayer.php"  method="post" class="form" >
       
-        <input type="text"   onkeyup="formBlur(this)" id="username" placeholder="Your Name (required)">
+        <input type="text"   onkeyup="formBlur(this)" name="name" id="username" placeholder="Your Name (required)">
         <p id="p-user"></p>
             
-        <input type="email"     onkeyup="formBlur(this)"   id="email"  placeholder="Your Email (Optional)">
+        <input type="email"     onkeyup="formBlur(this)" name="email"  id="email"  placeholder="Your Email (Optional)">
         <p  id="p-email"  ></p>
             
-        <input type="number"   onkeyup="formBlur(this)"  id="number"   placeholder="Moblie Number (required)">
+        <input type="number"   onkeyup="formBlur(this)" name="number" id="number"   placeholder="Moblie Number (required)">
         <p  id="p-number" ></p>
             
-        <textarea id="textarea" onkeyup="formBlur(this)" rows="4" cols="40" placeholder="Your Prayer Request" ></textarea>
+        <textarea id="textarea" onkeyup="formBlur(this)" name="request" rows="4" cols="40" placeholder="Your Prayer Request" ></textarea>
         <p  id="p-textarea" ></p>
             
-        <button   onclick="actionForm()"  >Sign In</button>
+        <button type="submit"  onclick="actionForm()">Sign In</button>
         </form>
       
     </div>
