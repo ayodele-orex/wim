@@ -1,39 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css">
-        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css">
-      <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-        <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
-     
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>WIM/Home</title>
     
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
-         <script src="https://kit.fontawesome.com/587e8dc64f.js"></script> 
-     
-      <link rel="stylesheet" href="style.css"  media="screen">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css">
+      <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+      <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
+   
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>WIM/Home</title>
+      <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+  
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+       <script src="https://kit.fontawesome.com/587e8dc64f.js"></script> 
+   
+    <link rel="stylesheet" href="style.css"  media="screen">
+  
+        
+        <style>
+
+.gallery-class{
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.ImgThumbnail {
+  align-content: center;
+  justify-content: center;
+  margin: 10px;
+   border-radius: 5px;
+   cursor: pointer;
+   transition: 0.3s;
+   height: 300px;
+  
+}
+/* .ImgThumbnail:nth-of-type(1) {
+   margin-left: 20%;
+} */
+.modal {
+   display: none;
+   position: fixed;
+   z-index: 1;
+   padding-top: 100px;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+   overflow: auto;
+   background-color: rgb(0, 0, 0);
+   background-color: rgba(0, 0, 0, 0.9);
+}
+.modalImage {
+   margin: 0 auto;
+   display: block;
+   width: 70%;
+   padding: 20px;
+   max-width: 700px;
+}
+#caption {
+   margin: auto;
+   display: block;
+   width: 70%;
+   max-width: 700px;
+   text-align: center;
+   color: #ccc;
+   padding: 10px 0;
+   height: 150px;
+}
+.close {
+  color: #fff;
+  float: right;
+  font-size: 40px;
+  margin-right: 30px;
+}
+.close:hover,
+.close:focus {
+  cursor: pointer;
+  color:#059224 ;
+  text-decoration: none;
+  cursor: pointer;
+}
+@media only screen and (max-width: 700px) {
+   .modalImage {
+      width: 100%;
+   }
+   .ImgThumbnail {
+    height: 350px;
+    width: 350px;
+}
+}
+      </style>
+
  
           
   </head>
   <body>
     <header class="header">
-      <a href="#"><img src="images/wmi_2_transparent 1.png" class="logo"></a>
+      <a href="index.html"><img src="images/wmi_2_transparent 1.png" class="logo"></a>
   
-      <nav class="navbar" ms-auto>
+   
+      <nav class="navbar navbar-expand-lg" ms-auto>
           <a href="index.html">Home</a>
           <a href="about.html">About</a>
           <a href="portfolio.html">Portfolio</a>
-          <a href="blog.html">Blog</a>
           <a href="events.html">Events</a>
+          <div class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="index.html"  role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Requests
+              </a>
+              <ul class="dropdown-menu">
+                <li><a style="margin-left: 0;" class="dropdown-item" href="prayer.html">Prayer Requests</a></li>
+                <li><a style="margin-left: 0;" class="dropdown-item" href="testimonial.html">Testimony</a></li>
+                <li><a style="margin-left: 0;" class="dropdown-item" href="appointment.html">Appointment Requests</a></li>
+              </ul>
+          </div>
           <a href="gallery.html">Gallery</a>
           <a href="contact.html">Contact</a>
           <a class="active"href="donate.html">DONATE NOW</a>
-
       </nav>
       <div class="icons">
          <div class="fas fa-outdent" id="menu-btn"></div>
@@ -44,160 +135,164 @@
       <h3>Gallery</h3>
     </div>
 
-    <section class="gallery_show">
-      <div class="show-name">
-        <h2>All Photos</h2>
-      </div>
-      <div class="row">
-        <div class="column">
-          <a href="images/Frame 93.png"><img src="images/Frame 93.png" alt="Snow" style="width:95%"></a>
-          <h4>caption</h4>
-  
-        </div>
-        <div class="column">
-          <a href="images/Frame 94.png"><img src="images/Frame 94.png" alt="Forest" style="width:95%"></a>
-          <h4>caption</h4>
-        </div>
-        <div class="column">
-          <a href="images/Frame 93.png"><img src="images/Frame 93.png" alt="Mountains" style="width:95%"></a>
-          <h4>caption</h4>
-        </div>
-    </div>
-        
-      
-        <div class="row">
-          <div class="column">
-            <a href="images/Frame 93.png"><img src="images/Frame 93.png" alt="Snow" style="width:95%"></a>
-            <h4>caption</h4>
-    
-          </div>
-          <div class="column">
-            <a href="images/Frame 94.png"><img src="images/Frame 94.png" alt="Forest" style="width:95%"></a>
-            <h4>caption</h4>
-          </div>
-          <div class="column">
-            <a href="images/Frame 93.png"><img src="images/Frame 93.png" alt="Mountains" style="width:95%"></a>
-            <h4>caption</h4>
-          </div>
-      </div>
-          
-    <div class="row">
-      <div class="column">
-        <a href="images/Frame 93.png"><img src="images/Frame 93.png" alt="Snow" style="width:95%"></a>
-        <h4>caption</h4>
 
-      </div>
-      <div class="column">
-        <a href="images/Frame 94.png"><img src="images/Frame 94.png" alt="Forest" style="width:95%"></a>
-        <h4>caption</h4>
-      </div>
-      <div class="column">
-        <a href="images/Frame 93.png"><img src="images/Frame 93.png" alt="Mountains" style="width:95%"></a>
-        <h4>caption</h4>
-      </div>
+    <section >
+
+      <div class="gallery-class">  
+  <img class="ImgThumbnail" src="images/20191101_153802.jpg"/>
+  <img class="ImgThumbnail" src="images/20190731_084441.jpg"/>
+  <img class="ImgThumbnail" src="images/20191010_114403.jpg">
+  <img class="ImgThumbnail" src="images/20191107_095845.jpg"/>
+  <img class="ImgThumbnail" src="images/20191021_135344.jpg"/>
+</div>
+<div class="gallery-class"> 
+  <img class="ImgThumbnail" src="images/20191102_122112.jpg">
+  <img class="ImgThumbnail" src="images/20191101_172643.jpg"/>
+  <img class="ImgThumbnail" src="images/20191105_162425.jpg"/> 
+  <img class="ImgThumbnail" src="images/20191105_160540.jpg"/>
+  <img class="ImgThumbnail" src="images/20191101_180548.jpg"/>
+ 
+</div>
+<div class="gallery-class">
+  <img class="ImgThumbnail" src="images/20191116_182110 (1).jpg"/> 
+  <img class="ImgThumbnail" src="images/20190722_121008.jpg"/>
+  <img class="ImgThumbnail" src="images/20191028_131749.jpg">
+  <img class="ImgThumbnail" src="images/20190826_105313.jpg"/>
+</div>
+<div class="gallery-class">  
+  <img class="ImgThumbnail" src="images/20191110_110603.jpg"/>
+  <img class="ImgThumbnail" src="images/20191019_120633.jpg"/>
+  <img class="ImgThumbnail" src="images/20191110_110821.jpg">
+</div>
+<div class="gallery-class"> 
+  <img class="ImgThumbnail" src="images/20190716_132024.jpg">
+  <img class="ImgThumbnail" src="images/20190716_132054.jpg"/>
+  <img class="ImgThumbnail" src="images/20190606_122312.jpg"/> 
+  <img class="ImgThumbnail" src="images/20190606_124635.jpg"/>
+  <img class="ImgThumbnail" src="images/20190606_124638.jpg"/>
+ 
+</div>
+
+  <div class="modal">
+  <span class="close"> x </span>
+  <img  class="modalImage" id="img01" />
   </div>
-      
-    </section>
-
-  <footer class="footer">
-
-      <div class="contain">
-          <div class="contain-display">
-  <div class="col-image">
-              <img src="images/wmi_2_transparent 1.png" alt="">
-          </div>
-          <div class="contain-items">
-          
-
-              <div class="col">
-                  <h1>Adout</h1>
-                  <ul>
-                      <li>the ministry</li>
-                      <li>revd. dr. supo ayokunle</li>
-                  
-                  </ul>
-              </div>
-              
-              <div class="col">
-                  <h1>media centre</h1>
-                  <ul>
-                      <li>shop for books now</li>
-                      <li>watch video message</li>
-                      <li>sermons</li>
-                      
-                  </ul>
-              </div>
-              <div class="col">
-                  <h1>Resources</h1>
-                  <ul>
-                      <li>blog posts</li>
-                      <li>share a testimony</li>
-                      <li>submit a prayer request</li>
-                      
-                  </ul>
-              </div>
-          </div>
-          </div>
-
-
-  <div class="footer_idea">
-        <div class="contain-items">
-          
-
-          <div class="col2">
-              <div class="col-img">
-                  <img src="images/call.png" alt="">
-              </div>
-              <div class="col-input">
-            <h1>phone</h1>
-            <ul>
-          <li>+234805723038574</li>
-            </ul>
-            </div>
-          </div>
-
-
-
-
-          <div class="col2">
-              <div class="col-img">
-                  <img src="images/call (1).png" alt="">
-              </div>
-              <div class="col-input">
-            <h1>email</h1>
-            <ul>
-              <li>+info@wim.ng</li>
-              <li>+support@wim.ng</li>
-              <li>+supo@wim.ng</li>
-            </ul>
-            </div>
-          </div>
-
-          
-        
-
-        </div>
   
-        <div class="col3">
+    </section>
+    <script>
+      var modalEle = document.querySelector(".modal");
+      var modalImage = document.querySelector(".modalImage");
+      Array.from(document.querySelectorAll(".ImgThumbnail")).forEach(item => {
+         item.addEventListener("click", event => {
+            modalEle.style.display = "block";
+            modalImage.src = event.target.src;
+         });
+      });
+      document.querySelector(".close").addEventListener("click", () => {
+         modalEle.style.display = "none";
+      });
+      </script>
+
+<footer class="footer">
+
+  <div class="contain">
+      <div class="contain-display">
+<div class="col-image">
+         <a href="index.html"><img src="images/Group 14.png" alt=""></a> 
+       </div>
+      <div class="contain-items">
+      
+
+          <div class="col">
+              <h1>Adout</h1>
+              <ul>
+                  <li><a href="about.html">the Ministries</a></li>
+                  <li><a href="about.html">revd. dr. supo ayokunle</a></li>
+              
+              </ul>
+          </div>
+          
+          <div class="col">
+              <h1>media centre</h1>
+              <ul>
+                  <li><a href="#">shop for books now</a></li>
+                  <li><a href="index.html">watch video message</a></li>
+                  <li><a href="index.html">sermons</a></li>
+                  
+              </ul>
+          </div>
+          <div class="col">
+              <h1>Resources</h1>
+              <ul>
+                  <li><a href="blog.html">blog posts</a></li>
+                  <li><a href="testimonial.html">share a testimony</a></li>
+                  <li><a href="prayer.html">submit a prayer reques</a>t</li>
+                  
+              </ul>
+          </div>
+      </div>
+      </div>
+
+
+<div class="footer_idea">
+    <div class="contain-items">
+      
+
+      <div class="col2">
           <div class="col-img">
-              <img src="images/call (2).png" alt="">
+              <img src="images/call.png" alt="">
           </div>
           <div class="col-input">
-        <h1>address</h1>
-        
-          
-          <p> No 10, abiola street, llaro New bodija, ibadan.oyo state, Nigeria </p>
-        
+        <h1>phone</h1>
+        <ul>
+      <li>jenfa:+234805723038574</li>
+      <li>Deji: +2348158893242</li>
+        </ul>
         </div>
-        </div>
+      </div>
 
+
+
+
+      <div class="col2">
+          <div class="col-img">
+              <img src="images/call (1).png" alt="">
+          </div>
+          <div class="col-input">
+        <h1>email</h1>
+        <ul>
+          <li>+info@wim.ng</li>
+          <li>+support@wim.ng</li>
+          <li>+supo@wim.ng</li>
+        </ul>
         </div>
-        <div class="clearfix"></div>
       </div>
-      <div class="copyright">
-          <p>WIN copyright <i class="fa fa-copyright" aria-hidden="true"></i> 2022</p>
+
+      
+    
+
+    </div>
+
+    <div class="col3">
+      <div class="col-img">
+          <img src="images/call (2).png" alt="">
       </div>
-  </footer>
+      <div class="col-input">
+    <h1>address</h1>
+    
+      
+      <p> House 1, Road C5 Alagbayun Power House Area Beside A3 Hotel and Suite Ibadan, Oyo State. </p>
+    
+    </div>
+    </div>
+
+    </div>
+    <div class="clearfix"></div>
+  </div>
+   <div class="copyright">
+      <p>WIN copyright <i class="fa fa-copyright" aria-hidden="true"></i> 2022</p>
+   </div>
+</footer>
   <script src="script.js"></script>
   </body>
 

@@ -1,39 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css">
-        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css">
-      <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-        <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
-     
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>WIM/Home</title>
-    
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
-         <script src="https://kit.fontawesome.com/587e8dc64f.js"></script> 
-     
-      <link rel="stylesheet" href="style.css"  media="screen">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
  
-          
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WIM/Home</title>
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+     <script src="https://kit.fontawesome.com/587e8dc64f.js"></script> 
+ 
+  <link rel="stylesheet" href="style.css"  media="screen">
+
+      
   </head>
   <body>
     <header class="header">
-      <a href="#"><img src="images/wmi_2_transparent 1.png" class="logo"></a>
+      <a href="index.html"><img src="images/wmi_2_transparent 1.png" class="logo"></a>
   
-      <nav class="navbar" ms-auto>
+   
+      <nav class="navbar navbar-expand-lg" ms-auto>
           <a href="index.html">Home</a>
           <a href="about.html">About</a>
           <a href="portfolio.html">Portfolio</a>
-          <a href="blog.html">Blog</a>
           <a href="events.html">Events</a>
+          <div class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="index.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Requests
+              </a>
+              <ul class="dropdown-menu">
+                <li><a style="margin-left: 0;" class="dropdown-item" href="prayer.html">Prayer Requests</a></li>
+                <li><a style="margin-left: 0;" class="dropdown-item" href="testimonial.html">Testimony</a></li>
+                <li><a style="margin-left: 0;" class="dropdown-item" href="appointment.html">Appointment Requests</a></li>
+              </ul>
+          </div>
           <a href="gallery.html">Gallery</a>
           <a href="contact.html">Contact</a>
           <a class="active"href="donate.html">DONATE NOW</a>
-
       </nav>
       <div class="icons">
          <div class="fas fa-outdent" id="menu-btn"></div>
@@ -63,21 +76,28 @@
       <div class="right_side_title">
         <h3>Submit a Prayer Request</h3>
       </div>
-      <form  action="prayer.php"  method="post" class="form" >
+
+   
+        <form action="https://formsubmit.co/5a0eb28cd6ae2af8fddebb336a16fc2e"  class="form" method="POST">
+            <!-- honeypot -->
+        <input type="text" name="_honey" style="display:none ;">
+
+        <input type="hidden" name="_captcha"  value="false">
+
+        <input type="hidden" name="_next" value="https://wim.ng/thank.html">
+
+        <input type="text" name="Sender&nbsp;Name"  name="name" id="username" placeholder="Your Name (required)">
       
-        <input type="text"   onkeyup="formBlur(this)" name="name" id="username" placeholder="Your Name (required)">
-        <p id="p-user"></p>
             
-        <input type="email"     onkeyup="formBlur(this)" name="email"  id="email"  placeholder="Your Email (Optional)">
-        <p  id="p-email"  ></p>
+        <input type="email"  name="Sender&nbsp;Email"    name="email"  id="email"  placeholder="Your Email (Optional)">
+   
             
-        <input type="number"   onkeyup="formBlur(this)" name="number" id="number"   placeholder="Moblie Number (required)">
-        <p  id="p-number" ></p>
+        <input type="number" name="Sender&nbsp;Number"    name="number" id="number"   placeholder="Moblie Number (required)">
+     
             
-        <textarea id="textarea" onkeyup="formBlur(this)" name="request" rows="4" cols="40" placeholder="Your Prayer Request" ></textarea>
-        <p  id="p-textarea" ></p>
-            
-        <button type="submit"  onclick="actionForm()">Sign In</button>
+        <textarea id="textarea" name="Sender&nbsp;Prayer&nbsp;Request"  name="request" rows="4" cols="40" placeholder="Your Prayer Request" ></textarea>
+    
+          <button type="submit">Submit</button>
         </form>
       
     </div>
@@ -87,103 +107,104 @@
 
   <footer class="footer">
 
-      <div class="contain">
-          <div class="contain-display">
-  <div class="col-image">
-              <img src="images/wmi_2_transparent 1.png" alt="">
-          </div>
-          <div class="contain-items">
-          
-
-              <div class="col">
-                  <h1>Adout</h1>
-                  <ul>
-                      <li>the ministry</li>
-                      <li>revd. dr. supo ayokunle</li>
-                  
-                  </ul>
-              </div>
-              
-              <div class="col">
-                  <h1>media centre</h1>
-                  <ul>
-                      <li>shop for books now</li>
-                      <li>watch video message</li>
-                      <li>sermons</li>
-                      
-                  </ul>
-              </div>
-              <div class="col">
-                  <h1>Resources</h1>
-                  <ul>
-                      <li>blog posts</li>
-                      <li>share a testimony</li>
-                      <li>submit a prayer request</li>
-                      
-                  </ul>
-              </div>
-          </div>
-          </div>
-
-
-  <div class="footer_idea">
+    <div class="contain">
+        <div class="contain-display">
+ <div class="col-image">
+           <a href="index.html"><img src="images/Group 14.png" alt=""></a> 
+         </div>
         <div class="contain-items">
-          
+        
 
-          <div class="col2">
-              <div class="col-img">
-                  <img src="images/call.png" alt="">
-              </div>
-              <div class="col-input">
-            <h1>phone</h1>
-            <ul>
-          <li>+234805723038574</li>
-            </ul>
+            <div class="col">
+                <h1>Adout</h1>
+                <ul>
+                    <li><a href="about.html">the Ministries</a></li>
+                    <li><a href="about.html">revd. dr. supo ayokunle</a></li>
+                
+                </ul>
             </div>
-          </div>
-
-
-
-
-          <div class="col2">
-              <div class="col-img">
-                  <img src="images/call (1).png" alt="">
-              </div>
-              <div class="col-input">
-            <h1>email</h1>
-            <ul>
-              <li>+info@wim.ng</li>
-              <li>+support@wim.ng</li>
-              <li>+supo@wim.ng</li>
-            </ul>
+            
+            <div class="col">
+                <h1>media centre</h1>
+                <ul>
+                    <li><a href="#">shop for books now</a></li>
+                    <li><a href="index.html">watch video message</a></li>
+                    <li><a href="index.html">sermons</a></li>
+                    
+                </ul>
             </div>
+            <div class="col">
+                <h1>Resources</h1>
+                <ul>
+                    <li><a href="blog.html">blog posts</a></li>
+                    <li><a href="testimonial.html">share a testimony</a></li>
+                    <li><a href="prayer.html">submit a prayer reques</a>t</li>
+                    
+                </ul>
+            </div>
+        </div>
+        </div>
+
+
+<div class="footer_idea">
+      <div class="contain-items">
+        
+
+        <div class="col2">
+            <div class="col-img">
+                <img src="images/call.png" alt="">
+            </div>
+            <div class="col-input">
+          <h1>phone</h1>
+          <ul>
+        <li>jenfa:+234805723038574</li>
+        <li>Deji: +2348158893242</li>
+          </ul>
           </div>
-
-          
-        
-
         </div>
-  
-        <div class="col3">
-          <div class="col-img">
-              <img src="images/call (2).png" alt="">
+
+
+
+
+        <div class="col2">
+            <div class="col-img">
+                <img src="images/call (1).png" alt="">
+            </div>
+            <div class="col-input">
+          <h1>email</h1>
+          <ul>
+            <li>+info@wim.ng</li>
+            <li>+support@wim.ng</li>
+            <li>+supo@wim.ng</li>
+          </ul>
           </div>
-          <div class="col-input">
-        <h1>address</h1>
-        
-          
-          <p> No 10, abiola street, llaro New bodija, ibadan.oyo state, Nigeria </p>
-        
-        </div>
         </div>
 
+        
+      
+
+      </div>
+ 
+      <div class="col3">
+        <div class="col-img">
+            <img src="images/call (2).png" alt="">
         </div>
-        <div class="clearfix"></div>
+        <div class="col-input">
+      <h1>address</h1>
+      
+        
+        <p> House 1, Road C5 Alagbayun Power House Area Beside A3 Hotel and Suite Ibadan, Oyo State. </p>
+      
       </div>
-      <div class="copyright">
-          <p>WIN copyright <i class="fa fa-copyright" aria-hidden="true"></i> 2022</p>
       </div>
-  </footer>
+
+      </div>
+      <div class="clearfix"></div>
+    </div>
+     <div class="copyright">
+        <p>WIN copyright <i class="fa fa-copyright" aria-hidden="true"></i> 2022</p>
+     </div>
+</footer>
   <script src="script.js"></script>
   </body>
 

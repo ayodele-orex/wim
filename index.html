@@ -12,6 +12,10 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>WIM/Home</title>
+        <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
     
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
          <script src="https://kit.fontawesome.com/587e8dc64f.js"></script> 
@@ -23,18 +27,27 @@
 <body>
 
   <header class="header">
-    <a href="#"><img src="images/wmi_2_transparent 1.png" class="logo"></a>
+    <a href="index.html"><img src="images/wmi_2_transparent 1.png" class="logo"></a>
 
-    <nav class="navbar" ms-auto>
+ 
+    <nav class="navbar navbar-expand-lg" ms-auto>
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="portfolio.html">Portfolio</a>
-        <a href="blog.html">Blog</a>
         <a href="events.html">Events</a>
+        <div class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#request"  role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Requests
+            </a>
+            <ul class="dropdown-menu">
+              <li><a style="margin-left: 0;" class="dropdown-item" href="prayer.html">Prayer Requests</a></li>
+              <li><a style="margin-left: 0;" class="dropdown-item" href="testimonial.html">Testimonys</a></li>
+              <li><a style="margin-left: 0;" class="dropdown-item" href="appointment.html">Appointment Requests</a></li>
+            </ul>
+        </div>
         <a href="gallery.html">Gallery</a>
         <a href="contact.html">Contact</a>
         <a class="active"href="donate.html">DONATE NOW</a>
-
     </nav>
     <div class="icons">
        <div class="fas fa-outdent" id="menu-btn"></div>
@@ -43,15 +56,22 @@
      
      <section class="slider">
           
-      <div class="w3-content w3-section" style="max-width:500px">
-        <img class="mySlides" src="images/Welcome 1.png" style="width:100%">
-        <img class="mySlides" src="images/Welcome.png" style="width:100%">
-        <img class="mySlides" src="images/ministry partners.png" style="width:100%">
-        <img class="mySlides" src="images/Vision.png" style="width:100%">
-        <img class="mySlides" src="images/Being confident of this.png" style="width:100%">
-        <img class="mySlides" src="images/f._Isaiah 45_2.png" style="width:100%">
-      </div>
-      
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="images/Welcome 3.png" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="images/Welcome 2.png" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="images/Welcome.png" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="images/welcome.jpg" class="d-block w-100" alt="...">
+              </div>
+            </div>
+          </div>
 
      </section>
 
@@ -62,12 +82,17 @@
             <div class="top-box">
                 <div class="content-box">
                     <h1>
-                        About Us
+                        Waymaker International Ministries  
                     </h1>
                     <p>
-                        APIMatic is a developer experience platform for web APIs.  <br /> Our mission is to make developers productive through automatic code generation.
-                    </p>
-                   <a href="about.html"><button class="btn">Hover Over Me</button></a>
+                        The name of the ministry is Waymaker International Ministries(WIM)
+                        This name was derived from the Book of Isaiah 45: 2 which says,
+                         ‘I will go before you an make the crooked places straight; 
+                         I will break in pieces the gates of bronze and cut the bars of iron.’ (NKJV)
+                </p>
+                <div class="read-more-btn">
+                    <a href="about.html" class="hvr-float-shadow">Read More</a>
+                </div>
 
 
                 </div>
@@ -76,16 +101,20 @@
                         <img src="images/Group 15.png" alt="">
                         <div class="statement-texts">
                         <h3>Our Vision</h3>
-                        <p>APIMatic is a developer experience platform for web APIs.
-                            Our mission is to make developers productive through automatic code generation</p>
+                        <p>TO PREACH AND PROPAGATE THE GOSPEL OF JESUS CHRIST THROUGH
+                            ALL AVAILABLE MEDIA WHILE REACHING OUT TO LOST SOULS AND
+                             WINNING THEM TO THE KINGDOM OF GOD.</p>
                     </div>
                     </div>
                     <div class="statement">
                         <img src="images/carbon_request-quote.png" alt="">
                         <div class="statement-texts">
                         <h3>Our Mission Statement</h3>
-                        <p>APIMatic is a developer experience platform for web APIs.
-                            Our mission is to make developers productive through automatic code generation</p>
+                        <p>TO ESTABLISH CHURCHES, ORPHANAGES, SENIOR CITIZEN HOMES, FAITH HOMES
+                             AND OTHER WORKS OF CHARITY. TO ENGAGE IN CHRISTIAN MISSION 
+                             THROUGH THE BUILDING OF SCHOOLS AND THEOLOGICAL INSTITUTIONS.
+                            
+                            </p>
                     </div>
                     </div>
                 </div>
@@ -94,101 +123,91 @@
       </div>
 </section>
 
-<section class="videos-gallery">
+<section class="videos-gallery" id="videos">
 
     <h3>Watch Video Message</h3>
-    <div class="videos-image">
-    <!-- <video width="320" height="240" controls poster="">
-                    <source src="https://cut.ly/nnG9dvD" type="video/mp4"/>
-                    <p>
-                        APIMatic is a developer experience platform for web APIs.
-                        Our mission is to make developers productive through automatic code generation  
-                    </p>
-    </video><br>
+
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <!-- <div class="carousel-item ">
+            <div class="img-pic  "  >
+                <video controls class="slide">
+                    <source src="images/WhatsApp Video 2022-09-14 at 12.53.55 PM.mp4" type="video/mp4" >
+                  </video>
+            
+                <div class="watch">
+                    
+                    <h5 style="margin-top: 20px ;">Pray For The Year</h5>
+                </div> 
+             </div>
     
-    <video width="320" height="240" controls poster="">
-                    <source src="https://cut.ly/eIzLO3O" type="video/mp4"/>
-    </video><br>
-    
-    <video width="320" height="240" controls poster="">
-                    <source src="https://cut.ly/vcHjEC2" type="video/mp4"/>
-    </video><br>
-     -->
-  <div class="img-pic">
-    <video width="320" height="240" controls poster="images/Group 8.png">
-      <source src="https://cut.ly/vcHjEC2" type="video/mp4"/>
-</video>
-    <div class="watch">
-        <h6>12-JULY-2022</h6>
-        <h5>Let celebrate the name of Jesus</h5>
-        <button class="landingPage__button" class="pure-button fuller-button blue">Watch<span class="landingPage__buttonArrow">→</span></button>
-    </div> 
- </div>
-  <div class="img-pic">
-    <video width="320" height="240" controls poster="images/Group 8.png">
-      <source src="https://cut.ly/vcHjEC2" type="video/mp4"/>
-</video>
-    <div class="watch">
-    <h6>12-JULY-2022</h6>
-    <h5>Let celebrate the name of Jesus</h5>
-    <button class="landingPage__button" class="pure-button fuller-button blue">Watch<span class="landingPage__buttonArrow">→</span></button>
-</div> 
-</div>
-  <div class="img-pic">
-    <video width="320" height="240" controls poster="images/Group 8.png">
-      <source src="https://cut.ly/vcHjEC2" type="video/mp4"/>
-</video>
-    <div class="watch">
-        <h6>12-JULY-2022</h6>
-        <h5>Let celebrate the name of Jesus</h5>
-        <button class="landingPage__button" class="pure-button fuller-button blue">Watch<span class="landingPage__buttonArrow">→</span></button>
-    </div> 
-</div>
-</div>
+          </div> -->
+
+          <div class="carousel-item active">
+                 <div class="img-pic  "  >
+                <iframe src="https://www.youtube.com/embed/xHXTMeTwIsY"title="A YouTube video" frameborder="0" allowfullscreen></iframe>
+
+
+                <div class="watch">
+                    <h6>24 JULY,2022</h6>
+                    <h5>MORE THAN CONQUEROR 
+                        (Text. Romans 8: 35-39)</h5>
+                </div> 
+            </div>
+  
+          </div>
+          <div class="carousel-item">
+            <div class="img-pic  "  >
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/kHbrr5u9pJI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            
+                <div class="watch">
+                    <h6>Jun 27, 2022</h6>
+                    <h5>RECIPROCATING THE LOVE OF GOD THROUGH A LIFE OF SERVICE</h5>
+                </div> 
+             </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <div class="read-more-btn" style="margin-top: 20px;">
+        <a href="https://www.youtube.com/channel/UCbTDJNIZeKa9r-4T8-Y6P9A" class="hvr-float-shadow">click For More</a>
+    </div>
 
 </section>
 
 
-<section class="section">
+<section class="section" id="request">
     <div class="wrapper">
       <div class="box__grid">
-        <article class="box"><div class="box__content"><img src="images/icon-park-solid_insert-card.png" alt="">
+        <article class="box hvr-float-shadow"><div class="box__content"><img src="images/icon-park-solid_insert-card.png" alt="">
             <h4 class="box__title">Submit a Testimony</h4>
-            <p>Duis neque leo cursus ac libero ac imperdiet bibendum nisl mauris neque diam vulputate nem.</p><a href="testimonial.html"><span class="box__more">Check here →</span></a></idv></article>
-        <article class="box"><div class="box__content"><img src="images/icon-park-solid_insert-card.png" alt="">
+            <p>“Return to your home, 
+                and declare how much God has done for you.”
+            </p><a href="testimonial.html"><span class="box__more">Check here →</span></a></idv></article>
+        <article class="box hvr-float-shadow"><div class="box__content"><img src="images/icon-park-solid_insert-card.png" alt="">
             <h4 class="box__title">Submit a Prayer Request</h4>
-            <p>Duis neque leo cursus ac libero ac imperdiet bibendum nisl mauris neque diam vulputate nem.</p><a href="prayer.html"><span class="box__more">Check here →</span></a></div></article>
-        <article class="box"><div class="box__content"><img src="images/carbon_request-quote.png" alt="">
+            <p>“But truly God has listened; he has attended to the voice of my prayer.”
+            </p><a href="prayer.html"><span class="box__more">Check here →</span></a></div></article>
+        <article class="box hvr-float-shadow"><div class="box__content"><img src="images/carbon_request-quote.png" alt="">
             <h4 class="box__title">Request For Appointment</h4>
-            <p>Duis neque leo cursus ac libero ac imperdiet bibendum nisl mauris neque diam vulputate nem.</p><a href="appointment.html"><span class="box__more">Check here →</span></a></div></article>
+            <p>There is an appointed time for everything. And there is a time for every event under heaven.
+            </p><a href="appointment.html"><span class="box__more">Check here →</span></a></div></article>
       </div>
     </div>
-  </section>
-
-
-  <section class="image_gallery">
-
-    <h2>Gallery</h2>
-    <div class="image-content">
-   
-  <div class="gallery-pic">
-    <img src="images/Group 8.png"  alt=""> 
- </div>
- <div class="gallery-pic">
-    <img src="images/Group 8.png"  alt=""> 
- </div>
- <div class="gallery-pic">
-    <img src="images/Group 8.png"  alt=""> 
- </div>
-
-<div class="gallery-pic">
-    <img src="images/Group 8.png"  alt=""> 
- </div>
-
-</div>
-<a href="gallery.html"><button class="lock-gallery">View more →</button></a>
-   
 </section>
+
+
+
+
+
 
 <section class="events">
     <div class="events-item">
@@ -201,11 +220,13 @@
 <div class="events-block">
     <div class="block-items">
         <div class="sub-item">
-        <img src="images/Rectangle 25.png" alt="">
+        <img src="images/event.jpg" alt="">
         <div class="sub">
-            <h6>10-0ct-2022</h6>
-            <h3>WIM CONFERENCE 2022</h3>
-            <h6>WIM Conference is an annual gethering of believers</h6>
+            <h6>Thursday, October 20, 2022 by 5pm</h6>
+         
+            <h3>Productive Leadership For Organization Growth</h3>
+            <h6>Waymaker International Ministries present Productive
+                leadership for Organization growth</h6>
         </div>
      </div>
         <div  class="btn-events">
@@ -213,86 +234,96 @@
      </div>
     </div>
 
-    <div class="block-items">
-        <div class="sub-item">
-        <img src="images/Rectangle 25.png" alt="">
-        <div class="sub">
-            <h6>10-0ct-2022</h6>
-            <h3>WIM CONFERENCE 2022</h3>
-            <h6>WIM Conference is an annual gethering of believers</h6>
-        </div>
-     </div>
-        <div  class="btn-events">
-            <a href="events.html"><button>View more →</button></a> 
-     </div>
-    </div>
+  
 
 </div>
 
 </section>
 
-<section class="blog">
 
-<h3>Blog post</h3>
 
-    <div class="blog-contants">
-        <div class="blog-input">
-            <img src="images/Group 8.png" alt="..." class="img-thumbnail">
-            <div class="blog-icons">
-                <i class="fa fa-user" aria-hidden="true">  Admin</i>
-                <i class="fa fa-calendar" aria-hidden="true">  22-aug-2022</i>
-            </div>
-            <h5>Who is Christ?</h5>
-            <a href="blog.html"><button class="lock-blog">View more →</button></a>
+<!--blog-area-->
+<!-- <section class="blog-area">
+    <div class="container">
+        <div class="heading">
+            <h2>Latest Blogs</h2>
         </div>
-
-        <div class="blog-input">
-            <img src="images/Group 8.png" alt="..." class="img-thumbnail">
-            <div class="blog-icons">
-                <i class="fa fa-user" aria-hidden="true">  Admin</i>
-                <i class="fa fa-calendar" aria-hidden="true">  22-aug-2022</i>
+        <div class="blogs">
+            <div class="blogs-item hvr-float-shadow wow fadeInLeft" data-wow-delay="0.5s">
+                <div class="blog-img">
+                    <a href="javacript:;"><img src="https://srmahour.github.io/custom-testimonial-slider-and-blog/images/blog-8.jpg" alt="" class="img-fluid"></a>
+                    <p class="blog-time">
+                        <span class="blog-date">25</span>
+                        <span class="blog-month">May</span>
+                    </p>
+                </div>
+                <div class="blog-detail">
+                    <h4><a href="javascript:;">Ideas That Moved Us In 2018</a></h4>
+                    <ul>
+                        <li><a href="javascript:;">BY ADMIN</a></li>
+                        <li><a href="javascript:;">IN TECHNOLOGY</a></li>
+                    </ul>
+                    <p>Maecenas varius finibus orci vel dignissim. Nam posuere, magna pellentesque accumsan tincidunt, libero lorem convallis lectus</p>
+                </div>
             </div>
-            <h5>Who is Christ?</h5>
-            <a href="blog.html"><button class="lock-blog">View more →</button></a>
+            <div class="blogs-item hvr-float-shadow wow fadeInLeft" data-wow-delay="0.7s">
+                <div class="blog-img">
+                    <a href="javacript:;"><img src="https://srmahour.github.io/custom-testimonial-slider-and-blog/images/blog-7.jpg" alt="" class="img-fluid"></a>
+                    <p class="blog-time">
+                        <span class="blog-date">25</span>
+                        <span class="blog-month">May</span>
+                    </p>
+                </div>
+                <div class="blog-detail">
+                    <h4><a href="javascript:;">Ideas That Moved Us In 2018</a></h4>
+                    <ul>
+                        <li><a href="javascript:;">BY ADMIN</a></li>
+                        <li><a href="javascript:;">IN TECHNOLOGY</a></li>
+                    </ul>
+                    <p>Maecenas varius finibus orci vel dignissim. Nam posuere, magna pellentesque accumsan tincidunt, libero lorem convallis lectus</p>
+                </div>
+            </div>
+            <div class="blogs-item hvr-float-shadow wow fadeInLeft" data-wow-delay="0.9s">
+                <div class="blog-img">
+                    <a href="javacript:;"><img src="https://srmahour.github.io/custom-testimonial-slider-and-blog/images/blog-9.jpg" alt="" class="img-fluid"></a>
+                    <p class="blog-time">
+                        <span class="blog-date">25</span>
+                        <span class="blog-month">May</span>
+                    </p>
+                </div>
+                <div class="blog-detail">
+                    <h4><a href="javascript:;">Ideas That Moved Us In 2018</a></h4>
+                    <ul>
+                        <li><a href="javascript:;">BY ADMIN</a></li>
+                        <li><a href="javascript:;">IN TECHNOLOGY</a></li>
+                    </ul>
+                    <p>Maecenas varius finibus orci vel dignissim. Nam posuere, magna pellentesque accumsan tincidunt, libero lorem convallis lectus</p>
+                </div>
+            </div>
         </div>
-
-        <div class="blog-input">
-            <img src="images/Group 8.png" alt="..." class="img-thumbnail">
-            <div class="blog-icons">
-                <i class="fa fa-user" aria-hidden="true">  Admin</i>
-                <i class="fa fa-calendar" aria-hidden="true">  22-aug-2022</i>
-            </div>
-            <h5>Who is Christ?</h5>
-            <a href="blog.html"><button class="lock-blog">View more →</button></a>
-        </div>
-
-        <div class="blog-input">
-            <img src="images/Group 8.png" alt="..." class="img-thumbnail">
-            <div class="blog-icons">
-                <i class="fa fa-user" aria-hidden="true">  Admin</i>
-                <i class="fa fa-calendar" aria-hidden="true">  22-aug-2022</i>
-            </div>
-            <h5>Who is Christ?</h5>
-            <a href="blog.html"><button class="lock-blog">View more →</button></a>
+        <div class="read-more-btn">
+            <a href="blog.html" class="hvr-float-shadow">Read More</a>
         </div>
     </div>
-</section>
+</section> -->
+<!--blog-area end-->
+
 
 <footer class="footer">
 
     <div class="contain">
         <div class="contain-display">
  <div class="col-image">
-            <img src="images/wmi_2_transparent 1.png" alt="">
+           <a href="index.html"><img src="images/Group 14.png" alt=""></a> 
          </div>
         <div class="contain-items">
         
 
             <div class="col">
-                <h1>Adout</h1>
+                <h1>About</h1>
                 <ul>
-                    <li>the ministry</li>
-                    <li>revd. dr. supo ayokunle</li>
+                    <li><a href="about.html">the Ministries</a></li>
+                    <li><a href="about.html">revd. dr. supo ayokunle</a></li>
                 
                 </ul>
             </div>
@@ -300,18 +331,18 @@
             <div class="col">
                 <h1>media centre</h1>
                 <ul>
-                    <li>shop for books now</li>
-                    <li>watch video message</li>
-                    <li>sermons</li>
+                    <li><a href="#">shop for books now</a></li>
+                    <li><a href="#videos">watch video message</a></li>
+                    <li><a href="#videos">sermons</a></li>
                     
                 </ul>
             </div>
             <div class="col">
                 <h1>Resources</h1>
                 <ul>
-                    <li>blog posts</li>
-                    <li>share a testimony</li>
-                    <li>submit a prayer request</li>
+                    <li><a href="blog.html">blog posts</a></li>
+                    <li><a href="testimonial.html">share a testimony</a></li>
+                    <li><a href="prayer.html">submit a prayer reques</a>t</li>
                     
                 </ul>
             </div>
@@ -330,7 +361,8 @@
             <div class="col-input">
           <h1>phone</h1>
           <ul>
-        <li>+234805723038574</li>
+        <li>jenfa:+234805723038574</li>
+        <li>Deji: +2348158893242</li>
           </ul>
           </div>
         </div>
@@ -365,7 +397,7 @@
       <h1>address</h1>
       
         
-        <p> No 10, abiola street, llaro New bodija, ibadan.oyo state, Nigeria </p>
+        <p> House 1, Road C5 Alagbayun Power House Area Beside A3 Hotel and Suite Ibadan, Oyo State. </p>
       
       </div>
       </div>
